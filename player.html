@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>지겨운 소리가 되기를</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 0;
+      padding: 16px;
+      justify-content: center;
+      align-items: center;
+      background: #1e1e1e;
+      color: #fff;
+    }
+
+    .btn {
+      font-size: 18px;
+      padding: 12px 28px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      width: 220px;
+    }
+
+    #btn1 { background: #ff6f61; color: white; }
+    #btn2 { background: #4caf50; color: white; }
+    #btn3 { background: #2196f3; color: white; }
+
+    .btn:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+
+  <button class="btn" id="btn1">배달의 민족</button>
+  <button class="btn" id="btn2">쿠팡이츠</button>
+  <button class="btn" id="btn3">요기요</button>
+
+  <!-- 오디오 태그 (파일 이름만 맞춰주면 됨) -->
+  <audio id="sound1" src="sound1.m4a"></audio>
+  <audio id="sound2" src="sound2.m4a"></audio>
+  <audio id="sound3" src="sound3.m4a"></audio>
+
+  <script>
+    const s1 = document.getElementById("sound1");
+    const s2 = document.getElementById("sound2");
+    const s3 = document.getElementById("sound3");
+
+    document.getElementById("btn1").addEventListener("click", () => {
+      s1.currentTime = 0;
+      s1.play();
+    });
+
+    document.getElementById("btn2").addEventListener("click", () => {
+      s2.currentTime = 0;
+      s2.play();
+    });
+
+    document.getElementById("btn3").addEventListener("click", () => {
+      s3.currentTime = 0;
+      s3.play();
+    });
+  </script>
+
+</body>
+</html>
