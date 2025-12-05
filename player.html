@@ -15,6 +15,7 @@
       align-items: center;
       background: #1e1e1e;
       color: #fff;
+      box-sizing: border-box;
     }
 
     .btn {
@@ -41,10 +42,10 @@
   <button class="btn" id="btn2">쿠팡이츠</button>
   <button class="btn" id="btn3">요기요</button>
 
-  <!-- 오디오 태그 (파일 이름만 맞춰주면 됨) -->
-  <audio id="sound1" src="https://raw.githubusercontent.com/jangbalgnom/sound-player/blob/main/sound1.m4a"></audio>
-  <audio id="sound2" src="https://raw.githubusercontent.com/jangbalgnom/sound-player/blob/main/sound2.m4a"></audio>
-  <audio id="sound3" src="https://raw.githubusercontent.com/jangbalgnom/sound-player/blob/main/sound3.m4a"></audio>
+  <!-- player.html과 같은 폴더에 있는 파일 기준 -->
+  <audio id="sound1" src="sound1.m4a"></audio>
+  <audio id="sound2" src="sound2.m4a"></audio>
+  <audio id="sound3" src="sound3.m4a"></audio>
 
   <script>
     const s1 = document.getElementById("sound1");
@@ -68,6 +69,4 @@
   </script>
 
 </body>
-
 </html>
-
